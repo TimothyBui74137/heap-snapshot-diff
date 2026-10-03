@@ -1,0 +1,17 @@
+{
+  "name": "heap-snapshot-diff",
+  "version": "0.1.0",
+  "description": "Captures references held by a module-scoped root object at two points in time and reports which references were added or removed between captures.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
