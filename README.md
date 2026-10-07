@@ -65,3 +65,10 @@ The `clock` option exists so tests (and callers who care about ordering)
 never touch wall-clock time. Pass a function that returns a monotonically
 increasing integer; the library stores and returns it verbatim as
 `capturedAt`. If you omit it, an internal counter is used.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
